@@ -1,0 +1,58 @@
+Bien sûr, voici comment vous pouvez formater vos requêtes curl en une seule ligne avec des paramètres de requête :
+
+1. Créer une nouvelle inscription :
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"inscriptionId": 1}' "http://localhost:8080/inscriptionheavent/create?userEmail=user@example.com&eventId=1"
+```Bon
+
+2. Mettre à jour une inscription :
+```bash
+curl -X PUT -H "Content-Type: application/json" -d '{"inscriptionId": 1}' "http://localhost:8080/inscriptionheavent/update1?userEmail=user@example.com&eventId=1"
+```Bon
+
+3. Créer un nouvel utilisateur :
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"email": "user@example.com", "username": "username", "password": "password", "isAdmin": false}' "http://localhost:8080/usersheavent/create"
+```Bon
+
+4. Mettre à jour un utilisateur :
+```bash
+curl -X PUT -H "Content-Type: application/json" -d '{"email": "user@example.com", "username": "new_username", "password": "new_password", "isAdmin": true}' "http://localhost:8080/usersheavent/update{email}"
+```//marche pas
+
+5. Créer un nouvel événement :
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"name": "event_name", "description": "event_description", "date": "2024-03-06T14:29:04.793+00:00", "location": "event_location", "places": 100, "user": 1, "prix": 50.0}' "http://localhost:8080/eventsheavent/create"
+```Bon
+
+6. Mettre à jour un événement :
+```bash
+curl -X PUT -H "Content-Type: application/json" -d '{"name": "new_event_name", "description": "new_event_description", "date": "2024-03-06T14:29:04.793+00:00", "location": "new_event_location", "places": 200, "user": 2, "prix": 100.0}' "http://localhost:8080/eventsheavent/update{1}"
+```
+
+N'oubliez pas de remplacer `"http://localhost:8080"`, `user@example.com`, `username`, `password`, `new_username`, `new_password`, `event_name`, `event_description`, `event_location`, `new_event_name`, `new_event_description`, `new_event_location`, `1`, `2`, `100`, `200`, `50.0`, `100.0` et `{id}` par vos propres valeurs.
+
+Sure, here are the curl commands to read data from your application:
+
+1. To read all inscriptions:
+```bash
+curl -X GET "http://localhost:8080/inscriptionheavent/read"
+```
+
+2. To read all users:
+```bash
+curl -X GET "http://localhost:8080/usersheavent/read"
+```
+
+3. To read a specific user by email:
+```bash
+curl -X GET "http://localhost:8080/usersheavent/read{email}"
+```
+Replace `{email}` with the actual email of the user.
+
+4. To read all events:
+```bash
+curl -X GET "http://localhost:8080/eventsheavent/read"
+```
+
+Please replace `"http://localhost:8080"` with your actual server address and port.
