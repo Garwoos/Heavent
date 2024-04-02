@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="540.0" prefWidth="850.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.heaventfx.HeaventEventController">
+    <children>
+        <Pane prefHeight="540.0" prefWidth="850.0" style="-fx-background-color: #24262b;">
+            <children>
+                <Button fx:id="recherche" layoutX="597.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#search" style="-fx-background-color: #282B30; -fx-text-fill: white; -fx-border-color: #E5D8AC;" text="rechercher">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <VBox fx:id="slider" alignment="TOP_RIGHT" layoutX="690.0" layoutY="80.0" prefHeight="450.0" prefWidth="150.0" style="-fx-background-color: #282B30;">
+                    <children>
+                        <Label fx:id="usernamelabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="148.0" style="-fx-text-fill: #E5D8AC;" textFill="#e5d8ac">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                  <Button fx:id="Accueil" alignment="CENTER" contentDisplay="TOP" graphicTextGap="3.0" mnemonicParsing="false" onMouseClicked="#welcome" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: #282B30;" styleClass="special-button" text="Accueil" textAlignment="RIGHT" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="Reserv" alignment="CENTER" contentDisplay="TOP" graphicTextGap="3.0" mnemonicParsing="false" onMouseClicked="#myEvent" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: #282B30;" styleClass="special-button" text="Mes reservations" textAlignment="RIGHT" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </Button>
+                        <Button fx:id="GestionEvent" contentDisplay="TOP" graphicTextGap="3.0" mnemonicParsing="false" onMouseClicked="#EventGestion" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: #282B30;" styleClass="special-button" text="Gestion évènement" textAlignment="RIGHT" textFill="WHITE">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="creatEvent" contentDisplay="TOP" graphicTextGap="3.0" layoutX="95.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#creaEvent" prefHeight="26.0" prefWidth="111.0" style="-fx-background-color: #282B30;" styleClass="special-button" text="Crée évènement" textAlignment="RIGHT" textFill="WHITE">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="deconnexion" contentDisplay="TOP" graphicTextGap="3.0" layoutX="95.0" layoutY="37.0" mnemonicParsing="false" onAction="#dc" onMouseClicked="#dc" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #282B30;" styleClass="special-button" text="Déconnexion" textAlignment="RIGHT" textFill="WHITE">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+                <TextField fx:id="barreRecherche" layoutX="224.0" layoutY="24.0" prefHeight="25.0" prefWidth="363.0" promptText="Recheche" />
+                <Label layoutX="55.0" layoutY="22.0" text="Heavent" textFill="#e5d8ac">
+                    <font>
+                        <Font name="Yu Gothic Regular" size="24.0" />
+                    </font>
+                </Label>
+                <Button fx:id="menu" layoutX="756.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #282B30; -fx-border-color: #E5D8AC;" text="Menu" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="menuClose" layoutX="756.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #282B30; -fx-border-color: #E5D8AC;" text="Menu" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+              <Pane layoutX="10.0" layoutY="80.0" prefHeight="450.0" prefWidth="671.0" style="-fx-background-color: #282B30;">
+               <children>
+                  <Label fx:id="EventName" layoutX="208.0" layoutY="34.0" prefHeight="26.0" prefWidth="278.0" textFill="#e5d8ac">
+                     <font>
+                        <Font name="Yu Gothic Regular" size="22.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="EventType" fitHeight="239.0" fitWidth="200.0" layoutX="38.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="ResEvent" layoutX="555.0" layoutY="389.0" mnemonicParsing="false" onMouseClicked="#ReservEvent" style="-fx-background-color: #282B30; -fx-border-color: #E5D8AC;" text="Réserver" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="EventSiege" layoutX="174.0" layoutY="389.0" prefHeight="27.0" prefWidth="42.0" style="-fx-background-color: #282B30; -fx-text-fill: white;" stylesheets="@style.css" />
+                  <Label layoutX="30.0" layoutY="394.0" text="Nombre de place restante :" textFill="WHITE" />
+                  <Label layoutX="289.0" layoutY="314.0" text="Date de l'évènement :" textFill="WHITE" />
+                  <TextField fx:id="EventDate" layoutX="414.0" layoutY="309.0" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #282B30;" stylesheets="@style.css" />
+                  <TextField fx:id="descriptionEventField" alignment="TOP_LEFT" layoutX="290.0" layoutY="135.0" prefHeight="163.0" prefWidth="332.0" style="-fx-background-color: #282b30;" />
+               </children>
+            </Pane>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="540.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.heaventfx.HeaventGestionEventController">
+    <children>
+        <Pane prefHeight="540.0" prefWidth="850.0" style="-fx-background-color: #24262b;">
+            <children>
+                <Button fx:id="recherche" layoutX="597.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#search" style="-fx-background-color: #282B30; -fx-text-fill: white; -fx-border-color: #E5D8AC;" text="rechercher">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></Button>
+                <VBox fx:id="slider" alignment="TOP_RIGHT" layoutX="690.0" layoutY="80.0" prefHeight="450.0" prefWidth="150.0" style="-fx-background-color: #282B30;">
+                    <children>
+                        <Label fx:id="usernamelabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="148.0" style="-fx-text-fill: #E5D8AC;" textFill="#e5d8ac">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="Accueil" alignment="CENTER" contentDisplay="TOP" graphicTextGap="3.0" mnemonicParsing="false" onMouseClicked="#welcome" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #282B30;" styleClass="special-button" text="Accueil" textAlignment="RIGHT" textFill="WHITE">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <VBox.margin>
+                                <Insets top="25.0" />
+                            </VBox.margin>
+                        </Button>
+                  <Button fx:id="Reserv" alignment="CENTER" contentDisplay="TOP" graphicTextGap="3.0" mnemonicParsing="false" onMouseClicked="#myEvent" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: #282B30;" styleClass="special-button" text="Mes reservations" textAlignment="RIGHT" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </Button>
+                        <Button contentDisplay="TOP" graphicTextGap="3.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: #282B30;" styleClass="special-button" text="Gestion évènement" textAlignment="RIGHT" textFill="WHITE">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="creatEvent" contentDisplay="TOP" graphicTextGap="3.0" layoutX="95.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#creaEvent" prefHeight="26.0" prefWidth="111.0" style="-fx-background-color: #282B30;" styleClass="special-button" text="Crée évènement" textAlignment="RIGHT" textFill="WHITE">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="deconnexion" contentDisplay="TOP" graphicTextGap="3.0" layoutX="95.0" layoutY="37.0" mnemonicParsing="false" onAction="#dc" onMouseClicked="#dc" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #282B30;" styleClass="special-button" text="Déconnexion" textAlignment="RIGHT" textFill="WHITE">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+                <TextField fx:id="barreRecherche" layoutX="224.0" layoutY="24.0" prefHeight="25.0" prefWidth="363.0" promptText="Recheche" />
+                <Label layoutX="55.0" layoutY="22.0" text="Heavent" textFill="#e5d8ac">
+                    <font>
+                        <Font name="Yu Gothic Regular" size="24.0" />
+                    </font>
+                </Label>
+                <Button fx:id="menu" layoutX="756.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #282B30; -fx-border-color: #E5D8AC;" text="Menu" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="menuClose" layoutX="756.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #282B30; -fx-border-color: #E5D8AC;" text="Menu" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Pane layoutX="10.0" layoutY="80.0" prefHeight="450.0" prefWidth="671.0" style="-fx-background-color: #282B30;">
+                    <children>
+                        <Label layoutX="204.0" layoutY="29.0" text="Modification d'évènement" textFill="#e5d8ac">
+                            <font>
+                                <Font name="Yu Gothic Regular" size="22.0" />
+                            </font>
+                        </Label>
+                  <Pane fx:id="ModifGestion" layoutX="40.0" layoutY="120.0" prefHeight="300.0" prefWidth="605.0">
+                     <children>
+                              <DatePicker fx:id="dateEventField" layoutX="13.0" layoutY="119.0" prefHeight="25.0" prefWidth="149.0" promptText="jj/mm/aaaa" style="-fx-border-color: #E5D8AC;" />
+                              <Label layoutX="13.0" layoutY="23.0" text="Nom de l'évènement :" textFill="WHITE" />
+                              <TextField fx:id="nomProjetField" layoutX="13.0" layoutY="47.0" promptText="Nom ?" style="-fx-border-color: #E5D8AC;" />
+                        <TextArea fx:id="descriptionEventField" layoutX="251.0" layoutY="47.0" prefHeight="171.0" prefWidth="334.0" promptText="De quoi parlera votre évènement ?" />
+                              <Label layoutX="13.0" layoutY="94.0" text="Date de l'évènement :" textFill="WHITE" />
+                              <Label layoutX="13.0" layoutY="168.0" text="Type d'évènement :" textFill="WHITE" />
+                              <ComboBox fx:id="typeEventComboBox" layoutX="13.0" layoutY="191.0" prefWidth="150.0" promptText="Évènement" style="-fx-border-color: #E5D8AC;" />
+                              <Label layoutX="13.0" layoutY="234.0" text="Nombre de place :" textFill="WHITE" />
+                              <TextField fx:id="siegeDispoField" layoutX="13.0" layoutY="259.0" promptText="100/200/?" style="-fx-border-color: #E5D8AC;" />
+                              <Label layoutX="251.0" layoutY="23.0" text="Description de l'évènement :" textFill="WHITE" />
+                              <Button fx:id="ModifierEvent" layoutX="454.0" layoutY="259.0" mnemonicParsing="false" onMouseClicked="#modifEvent" style="-fx-background-color: #282B30; -fx-border-color: #E5D8AC;" text="Modifier l'évènement" textFill="WHITE">
+                                  <cursor>
+                                      <Cursor fx:constant="HAND" />
+                                  </cursor>
+                              </Button>
+                     </children>
+                  </Pane>
+                  <ComboBox fx:id="choixEvent" layoutX="54.0" layoutY="89.0" prefWidth="150.0" promptText="Quel évènement ?" />
+                  <Label layoutX="54.0" layoutY="66.0" text="Nom de l'évènement :" textFill="WHITE" />
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
