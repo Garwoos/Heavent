@@ -1,0 +1,48 @@
+.form-button:hover {
+    -fx-border-color: #E5D8AC;
+    -fx-border-width: 2px;
+    -fx-border-radius: 2px;
+}
+
+.special-button {
+    -fx-text-fill: white;
+}
+
+.special-button:hover {
+    -fx-text-fill: #E5D8AC;
+}
+
+.text-field:disabled, .text-area:disabled {
+    -fx-text-fill: white !important;
+    -fx-opacity: 1;
+    -fx-padding: 0;
+    -fx-focus-color: transparent;
+
+}
+
+.scroll-bar {
+    -fx-background-color: #808080;
+    -fx-background-radius: 10px;
+    -fx-pref-width: 15px;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #282B30;
+    -fx-background-radius: 10px;
+    -fx-pref-width: 15px;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-padding: 0;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: transparent;
+}
+
