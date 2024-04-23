@@ -403,9 +403,6 @@ public class HeaventEventController {
             }
         });
 
-        String username = UserSession.getInstance().getUsername();
-        usernamelabel.setText(username);
-
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.5));
         slide.setNode(slider);
